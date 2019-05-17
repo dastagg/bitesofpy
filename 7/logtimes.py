@@ -19,7 +19,7 @@ with open(logfile) as f:
 
 def convert_to_datetime(line):
     """TODO 1:
-       Given a log line extract its timestamp and convert it to a datetime object.
+       Given a log line extract its timestamp and convert to a datetime object.
        For example calling the function with:
        INFO 2014-07-03T23:27:51 supybot Shutdown complete.
        returns:
@@ -33,8 +33,8 @@ def convert_to_datetime(line):
 
 def time_between_shutdowns(loglines):
     """TODO 2:
-       Extract shutdown events ("Shutdown initiated") from loglines and calculate the
-       timedelta between the first and last one.
+       Extract shutdown events ("Shutdown initiated") from loglines and
+       calculate the timedelta between the first and last one.
        Return this datetime.timedelta object."""
     log_array = []
     for line in loglines:
