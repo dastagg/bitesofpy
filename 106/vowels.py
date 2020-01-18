@@ -21,32 +21,18 @@ If the implementation is hard to explain, it's a bad idea.
 If the implementation is easy to explain, it may be a good idea.
 Namespaces are one honking great idea -- let's do more of those!
 """
-vowels = 'aeiou'
+vowels = "aeiou"
 
 
 def strip_vowels(text: str) -> (str, int):
-    zen_list = text.split()
-    print(zen_list)
-    replaced_words = []
-    replaced_vowels = 0
-    word_has_vowel = False
-    for word in zen_list:
-        for letter in word:
-            if letter in vowels:
-                word_has_vowel = True
-                word.replace(letter, '*')
-                replaced_vowels += 1
-            if word_has_vowel:
-                replaced_words.append(word)
-                word_has_vowel = False
+    replace_counter = 0
+    length = len(text)
+    new_text = ""
+    for i in range(length):
 
-    print(replaced_words)
-    print(replaced_vowels)
-                
-    
-    
-    
-    
-    
-strip_vowels(text)
-    
+        if text[i : i + 1].lower() in vowels:
+            new_text += "*"
+            replace_counter += 1
+        else:
+            new_text += text[i : i + 1]
+    return new_text, replace_counter
