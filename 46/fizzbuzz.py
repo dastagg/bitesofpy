@@ -1,8 +1,8 @@
 def fizzbuzz(num):
-    if (int(value) % 3) == 0 and (int(value) % 5) == 0:
+    if (int(num) % 3) == 0 and (int(num) % 5) == 0:
         return "FizzBuzz"
-    if (int(value) % 3) == 0:
+    if (int(num) % 3) == 0:
         return "Fizz"
-    if (int(value) % 5) == 0:
+    if (int(num) % 5) == 0:
         return "Buzz"
-    return value
+    return num
