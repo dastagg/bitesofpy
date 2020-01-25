@@ -1,5 +1,6 @@
 # Ignore everything except *.py
 *
-
 # But not python files
 !.py
+!*/
+
