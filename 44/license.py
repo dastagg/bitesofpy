@@ -1,5 +1,5 @@
-import string
 import secrets
+import string
 
 
 def build_key_part(num_of_chars):
