@@ -1,5 +1,3 @@
-"""Add module comment to test tig config."""
-
 VOWELS = 'aeiou'
 PYTHON = 'python'
 
