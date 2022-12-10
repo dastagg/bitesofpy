@@ -1,3 +1,5 @@
+from collections import ChainMap
+
 NOT_FOUND = "Not found"
 
 group1 = {'tim': 30, 'bob': 17, 'ana': 24}
@@ -10,4 +12,8 @@ def get_person_age(name):
        If name in > 1 dict, return the match of the group with
        greatest N (so group3 > group2 > group1)
     """
-    pass
+    name = name.lower() if isinstance(name, str) else name
+    # search goes in order of addition so as per requirements
+    # we insert groups from gt (#3) to lt (#1)
+    m = ChainMap(group3, group2, group1)
+    return m.get(name, NOT_FOUND)
